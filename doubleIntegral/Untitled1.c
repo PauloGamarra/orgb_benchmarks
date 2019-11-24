@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 // C++ program to calculate
 // double integral value
 
