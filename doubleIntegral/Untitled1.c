@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 // C++ program to calculate
 // double integral value
@@ -7,7 +8,7 @@
 // Change the function according to your need
 float givenFunction(float x, float y)
 {
-    return y * x;
+    return pow(x,2)/(1 + pow(y,2));
 }
 
 
