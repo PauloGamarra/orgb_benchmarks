@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
-#define I_WIDTH1 1080
-#define I_WIDTH2 1960
+#define I_WIDTH1 720
+#define I_WIDTH2 1280
 #define K_WIDTH1 3
 #define K_WIDTH2 3
 
@@ -33,10 +34,6 @@ void convolution_2D(float I[I_WIDTH1][I_WIDTH2], float K[K_WIDTH1][K_WIDTH2], fl
 
 int main(){
 
-    for (int m = -1; m <= 1; m++)
-    {
-        printf("%d",m);
-    }
 
     float I[I_WIDTH1][I_WIDTH2];
 
@@ -53,14 +50,6 @@ int main(){
 
 
     convolution_2D(I, K, O);
-/*
-    for(int i=0;i<I_WIDTH1;i++){
-       for(int j=0;j<I_WIDTH2;j++){
-            printf("%f\t", O[i][j]);
-        }
-        printf("\n");
-    }
-*/
 
     return 0;
 }

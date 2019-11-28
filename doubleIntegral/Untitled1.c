@@ -66,7 +66,7 @@ int main()
     float h, lx, ux, ly, uy;
 
     lx = 1, ux = 2, ly = 1,
-	uy = 2, h = 0.01;
+	uy = 2, h = 0.004;
 
     printf("%f", doubleIntegral(h, lx, ux, ly, uy));
     return 0;
