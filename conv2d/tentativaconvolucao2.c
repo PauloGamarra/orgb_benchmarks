@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <time.h>
 
-#define I_WIDTH1 5
-#define I_WIDTH2 5
+#define I_WIDTH1 1080
+#define I_WIDTH2 1960
 #define K_WIDTH1 3
 #define K_WIDTH2 3
 
@@ -37,11 +38,7 @@ int main(){
         printf("%d",m);
     }
 
-    float I[I_WIDTH1][I_WIDTH2] = {10, 20, 30, 40, 50,
-                                   10, 220, 222, 218, 10,
-                                   10, 86, 222, 226, 10,
-                                   10, 85, 221, 224, 10,
-                                   10, 10, 10, 10, 10};
+    float I[I_WIDTH1][I_WIDTH2];
 
     float K[K_WIDTH1][K_WIDTH2] = {0, 1, 2,
                                    0, 1, 2,
@@ -49,14 +46,21 @@ int main(){
 
     float O[I_WIDTH1][I_WIDTH2] ={};
 
-    convolution_2D(I, K, O);
+    srand(time(0));
+    for(int i =0; i<I_WIDTH1;i++)
+        for(int j=0; j<I_WIDTH2;j++)
+            I[i][j] = rand();
 
+
+    convolution_2D(I, K, O);
+/*
     for(int i=0;i<I_WIDTH1;i++){
        for(int j=0;j<I_WIDTH2;j++){
             printf("%f\t", O[i][j]);
         }
         printf("\n");
     }
+*/
 
     return 0;
 }
